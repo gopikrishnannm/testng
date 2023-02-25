@@ -1,0 +1,6 @@
+TestNG 
+-------------------
+Testing framework for JAVA
+Created by Cedric Beust
+Inspired from junit & Nunit
+can be used for unit, end to end, integration, functional testing...
