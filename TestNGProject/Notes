@@ -4,3 +4,14 @@ Testing framework for JAVA
 Created by Cedric Beust
 Inspired from junit & Nunit
 can be used for unit, end to end, integration, functional testing...
+
+
+Packages 
+-----------
+Groups different classes under a container
+
+
+TestNG.xml
+-----------------
+can give any name
+can create n number of file
