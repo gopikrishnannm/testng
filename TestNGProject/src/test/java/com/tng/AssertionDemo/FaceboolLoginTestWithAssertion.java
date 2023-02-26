@@ -1,4 +1,4 @@
-package com.tng.Tests;
+package com.tng.AssertionDemo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class FaceboolLoginTest {
+public class FaceboolLoginTestWithAssertion {
 	
 	WebDriver driver;
 	
@@ -33,7 +33,11 @@ public class FaceboolLoginTest {
 	public void testFacebookLogin() throws InterruptedException {
 		driver.findElement(By.name("email")).sendKeys("username1");
 		driver.findElement(By.name("pass")).sendKeys("abc", Keys.ENTER);
-		System.out.println(driver.getTitle());
+		String actual = driver.getTitle();
+		String expected = "Welcome to Facebook";
+		Assert.assertNull(actual);
+		Assert.assertNotEquals(expected, actual, "Failed to login with the given credential");
+		
 		Thread.sleep(500);
 		
 	}
@@ -41,7 +45,7 @@ public class FaceboolLoginTest {
 	@Test
 	public void warningPopUp() {
 		boolean isDisplayed = driver.findElement(By.className("_9ay7")).isDisplayed();
-		System.out.println(isDisplayed == true ? "Login Successfull " : "Login Failed");
+		Assert.assertTrue(isDisplayed, "Login was successful");
 	}
 	
 	@Test
