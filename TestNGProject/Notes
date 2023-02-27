@@ -15,3 +15,9 @@ TestNG.xml
 -----------------
 can give any name
 can create n number of file
+
+
+Assert 
+---------------
+what ever come from Assert class is hard assert
+code under hard assertion wont execute if the test fails
