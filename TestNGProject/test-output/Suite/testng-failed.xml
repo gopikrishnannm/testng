@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="loginfunctionalitytest(failed)">
+  <test thread-count="5" name="TestAnnotations(failed)">
     <classes>
-      <class name="com.tng.AssertionDemo.FaceboolLoginTestWithAssertion">
+      <class name="com.tng.Tests.FaceboolLoginTest">
         <methods>
+          <include name="initializeBrowser"/>
+          <include name="tesrDown"/>
+          <include name="warningPopUp"/>
           <include name="testFacebookLogin"/>
         </methods>
-      </class> <!-- com.tng.AssertionDemo.FaceboolLoginTestWithAssertion -->
+      </class> <!-- com.tng.Tests.FaceboolLoginTest -->
     </classes>
-  </test> <!-- loginfunctionalitytest(failed) -->
+  </test> <!-- TestAnnotations(failed) -->
 </suite> <!-- Failed suite [Suite] -->

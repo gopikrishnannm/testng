@@ -19,5 +19,13 @@ can create n number of file
 
 Assert 
 ---------------
-what ever come from Assert class is hard assert
+what ever come from Assert class is hard assert 
 code under hard assertion wont execute if the test fails
+
+
+Annotations
+-------------------------
+used to control the flow of execution of test methods
+introduced in java 1.5(jdk 5) eg.	@override
+@FindBy(id = "pass") WebElement userPassword
+

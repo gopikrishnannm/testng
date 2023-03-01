@@ -4,6 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -12,11 +14,15 @@ public class FaceboolLoginTest {
 	
 	WebDriver driver;
 	
-	@Test
-	public void launchFbApp() {
+	@BeforeTest
+	public void initializeBrowser() {
 		WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
+	}
+	
+	@Test
+	public void launchFbApp() {
 		driver.get("https://www.facebook.com/");
 	}
 	
@@ -43,9 +49,10 @@ public class FaceboolLoginTest {
 		System.out.println(isDisplayed == true ? "Login Successfull " : "Login Failed");
 	}
 	
-	@Test
-	public void closeApp() {
+	@AfterTest
+	public void tesrDown(){
 		driver.close();
 	}
+	
 	
 }

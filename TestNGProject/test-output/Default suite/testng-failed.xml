@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.tng.Tests.FaceboolLoginTest">
+      <class name="assertiontestpackage.OrangeHrmTest">
         <methods>
-          <include name="warningPopUp"/>
+          <include name="enterLoginDetails"/>
+          <include name="tearDown"/>
+          <include name="initializeBrowser"/>
         </methods>
-      </class> <!-- com.tng.Tests.FaceboolLoginTest -->
+      </class> <!-- assertiontestpackage.OrangeHrmTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
